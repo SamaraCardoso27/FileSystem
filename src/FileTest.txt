@@ -1,0 +1,36 @@
+
+Teste para sistema de Arquivo - Projeto de SO
+
+
+-->  formatDisk 100 10
+--> file1 = create
+--> inum1 = inumber file1
+--> write file1 HiThere 10000
+--> seek file1 -10 1
+--> read file1 50
+--> file2 = create
+--> inum2 = inumber file2
+--> write file2 Names_ 512
+--> file3 = create
+--> inum3 = inumber file3
+--> file2 = open inum1
+--> close file1
+--> delete inum2
+--> shutdown
+--> quit
+
+Teste com Verificação de Erro
+
+--> formatDisk 100 10
+--> file1 = create
+--> open 21
+--> close 21
+--> close -1
+--> write file1 Projeto de SO 2048
+--> write file1 SO 2048
+--> write file4 Aaaaaayyyyy!_ 512
+--> read file2 100
+--> close file2
+--> inum1 = inumber file2
+--> shutdown
+--> QUIT
